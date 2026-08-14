@@ -1,0 +1,232 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all var(--transition-normal);
+  padding: 1.5rem 0;
+}
+
+.navbar.scrolled {
+  padding: 1rem 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--transition-normal);
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-cta {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.nav-cta::after {
+  display: none !important;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--brand-light-blue);
+  transition: width var(--transition-normal);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--brand-light-blue);
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.arrow-icon {
+  transition: transform var(--transition-normal);
+}
+
+.arrow-icon.rotated {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu Styles */
+.nav-dropdown-wrapper {
+  position: relative;
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 1rem);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 240px;
+  border-radius: 12px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  background: rgba(10, 25, 47, 0.95);
+  animation: fadeIn 0.2s ease forwards;
+}
+
+.nav-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -1.2rem;
+  left: 0;
+  width: 100%;
+  height: 1.5rem;
+  background: transparent;
+}
+
+.nav-dropdown button,
+.nav-dropdown a {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: all var(--transition-fast);
+  display: block;
+}
+
+.nav-dropdown button:hover,
+.nav-dropdown a:hover {
+  background: rgba(14, 165, 233, 0.15);
+  color: var(--text-primary);
+  padding-left: 1.25rem;
+}
+
+/* Mobile Menu button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .desktop-menu,
+  .nav-cta {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 2rem 2rem;
+    gap: 1rem;
+    transition: right var(--transition-normal);
+    z-index: 999;
+    overflow-y: auto;
+  }
+
+  .mobile-menu.open {
+    right: 0;
+  }
+
+  .mobile-link {
+    font-size: 1.15rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--glass-border);
+    padding: 0.75rem 0;
+    text-align: left;
+    background: none;
+    border-left: none;
+    border-right: none;
+    color: var(--text-primary);
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .mobile-link.submenu-item {
+    font-size: 1rem;
+    padding-left: 1rem;
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  }
+
+  .mobile-link.submenu-item:hover {
+    color: var(--brand-light-blue);
+  }
+
+  .mobile-section-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--brand-light-blue);
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .mobile-section-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 1rem 0;
+  }
+}

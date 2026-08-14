@@ -1,0 +1,81 @@
+.mid-page-banner {
+  padding: 5rem 0;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mid-page-banner.default {
+  background: linear-gradient(135deg, rgba(2, 15, 30, 0.95), rgba(7, 11, 81, 0.7));
+}
+
+.mid-page-banner.highlight {
+  background: linear-gradient(135deg, rgba(10, 25, 47, 0.9), rgba(14, 165, 233, 0.08));
+  border-top: 1px solid rgba(14, 165, 233, 0.1);
+  border-bottom: 1px solid rgba(14, 165, 233, 0.1);
+}
+
+.mid-page-banner.accent {
+  background: linear-gradient(135deg, rgba(4, 20, 39, 0.95), rgba(2, 15, 30, 0.9));
+}
+
+.banner-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.banner-container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.banner-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+
+.highlight .banner-title {
+  color: var(--brand-light-blue);
+}
+
+.banner-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  margin-top: 1.25rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner-btn {
+  margin-top: 2rem;
+  display: inline-flex;
+}
+
+@media (max-width: 768px) {
+  .mid-page-banner {
+    padding: 4rem 1.5rem;
+  }
+
+  .banner-title {
+    font-size: 1.6rem;
+  }
+
+  .banner-subtitle {
+    font-size: 1rem;
+  }
+}

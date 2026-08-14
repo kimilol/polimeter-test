@@ -1,0 +1,217 @@
+/* ===== Page Layout ===== */
+.representantes-page {
+  padding-bottom: 6rem;
+  background-color: var(--bg-primary);
+}
+
+/* ===== Hero ===== */
+.representantes-hero {
+  background: radial-gradient(circle at top center, rgba(14, 165, 233, 0.15), transparent 60%),
+              radial-gradient(circle at bottom center, rgba(0, 240, 255, 0.05), transparent 50%);
+  padding: 8rem 0 4rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.representantes-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.representantes-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ===== Main Content ===== */
+.representantes-content {
+  margin-top: 4rem;
+}
+
+/* ===== Intro Card ===== */
+.representantes-intro {
+  display: flex;
+  gap: 2rem;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, rgba(10, 25, 47, 0.8), rgba(17, 34, 64, 0.4));
+  border: 1px solid var(--glass-border);
+  border-left: 4px solid var(--brand-light-blue);
+  border-radius: 16px;
+  margin-bottom: 3rem;
+}
+
+.representantes-intro-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(14, 165, 233, 0.1);
+  border-radius: 14px;
+  color: var(--brand-light-blue);
+}
+
+.representantes-intro-body h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.representantes-intro-body p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===== Representatives List ===== */
+.representantes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rep-card {
+  display: flex;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  background: rgba(17, 34, 64, 0.6);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  transition: border-color var(--transition-normal);
+}
+
+.rep-card:hover {
+  border-color: var(--brand-blue);
+}
+
+/* Left side: info */
+.rep-card-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.rep-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.rep-region-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--brand-light-blue);
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.15);
+}
+
+.rep-company-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.rep-contact-person {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.rep-icon {
+  color: var(--brand-light-blue);
+  flex-shrink: 0;
+}
+
+.rep-icon.whatsapp-icon {
+  color: #25d366;
+}
+
+/* Right side: contact details */
+.rep-card-right {
+  flex-shrink: 0;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  padding-left: 2.5rem;
+  gap: 0.75rem;
+}
+
+.rep-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.rep-email-link {
+  color: var(--brand-light-blue);
+  transition: color var(--transition-fast);
+}
+
+.rep-email-link:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .rep-card {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .rep-card-right {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-left: 0;
+    padding-top: 1.5rem;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .representantes-hero {
+    padding: 6rem 0 3rem;
+  }
+
+  .representantes-title {
+    font-size: 2.2rem;
+  }
+
+  .representantes-intro {
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.75rem;
+  }
+
+  .rep-card {
+    padding: 1.5rem;
+  }
+}

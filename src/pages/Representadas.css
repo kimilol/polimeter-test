@@ -1,0 +1,233 @@
+/* ===== Page Layout ===== */
+.representadas-page {
+  padding-bottom: 6rem;
+  background-color: var(--bg-primary);
+}
+
+/* ===== Hero ===== */
+.representadas-hero {
+  background: radial-gradient(circle at top center, rgba(14, 165, 233, 0.15), transparent 60%),
+              radial-gradient(circle at bottom center, rgba(0, 240, 255, 0.05), transparent 50%);
+  padding: 8rem 0 4rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.representadas-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.representadas-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ===== Main Content ===== */
+.representadas-content {
+  margin-top: 4rem;
+}
+
+/* ===== Intro Card ===== */
+.representadas-intro {
+  display: flex;
+  gap: 2rem;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, rgba(10, 25, 47, 0.8), rgba(17, 34, 64, 0.4));
+  border: 1px solid var(--glass-border);
+  border-left: 4px solid var(--brand-light-blue);
+  border-radius: 16px;
+  margin-bottom: 3rem;
+}
+
+.representadas-intro-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(14, 165, 233, 0.1);
+  border-radius: 14px;
+  color: var(--brand-light-blue);
+}
+
+.representadas-intro-body h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.representadas-intro-body p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===== Partners List ===== */
+.partners-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.partner-card {
+  display: flex;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  background: rgba(17, 34, 64, 0.6);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  transition: border-color var(--transition-normal);
+}
+
+.partner-card:hover {
+  border-color: var(--brand-blue);
+}
+
+/* Left side: info */
+.partner-card-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.partner-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.partner-origin {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--brand-light-blue);
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.15);
+}
+
+.partner-founded {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.partner-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.partner-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Right side: tags + link */
+.partner-card-right {
+  flex-shrink: 0;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.partner-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.partner-tag {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.partner-card:hover .partner-tag {
+  border-color: rgba(14, 165, 233, 0.2);
+  color: var(--text-primary);
+}
+
+.partner-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--brand-light-blue);
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--brand-light-blue);
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.partner-link:hover {
+  background: rgba(14, 165, 233, 0.1);
+  transform: translateY(-1px);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .partner-card {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .partner-card-right {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .partner-tags {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .representadas-hero {
+    padding: 6rem 0 3rem;
+  }
+
+  .representadas-title {
+    font-size: 2.2rem;
+  }
+
+  .representadas-intro {
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.75rem;
+  }
+
+  .partner-card {
+    padding: 1.5rem;
+  }
+
+  .partner-card-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
