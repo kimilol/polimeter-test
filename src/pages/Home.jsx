@@ -55,7 +55,7 @@ const Home = () => {
         title="MINIMIZE RISCOS OPERACIONAIS E EVITE PARADAS NÃO PROGRAMADAS."
         subtitle="A falha na detecção de defeitos compromete a segurança e gera prejuízos milionários. Implemente sistemas de inspeção validados pelo mercado."
         buttonText="Falar com Consultor Técnico"
-        buttonLink="#contato"
+        buttonLink="https://wa.me/5511976393318?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20produtos%20da%20Polimeter"
         theme="highlight"
       />
       
