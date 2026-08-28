@@ -8,6 +8,7 @@ import Representadas from './pages/Representadas';
 import Representantes from './pages/Representantes';
 import ContatoPage from './pages/ContatoPage';
 import ScrollToHashAndTop from './components/ScrollToHashAndTop';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <WhatsAppButton />
       </div>
     </BrowserRouter>
   );
