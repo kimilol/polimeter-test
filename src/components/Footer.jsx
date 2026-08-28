@@ -36,7 +36,7 @@ const Footer = () => {
             <ul>
               <li><button onClick={() => handleSolutionClick('ultrassom')} className="footer-btn-link">Ultrassom</button></li>
               <li><button onClick={() => handleSolutionClick('correntes-parasitas')} className="footer-btn-link">Correntes Parasitas</button></li>
-              <li><button onClick={() => handleSolutionClick('campo-magnetico')} className="footer-btn-link">Campo Magnético (MFL)</button></li>
+              <li><button onClick={() => handleSolutionClick('campo-magnetico')} className="footer-btn-link">Campo Magnético</button></li>
               <li><button onClick={() => handleSolutionClick('particulas-magneticas')} className="footer-btn-link">Partículas Magnéticas</button></li>
               <li><button onClick={() => handleSolutionClick('laser')} className="footer-btn-link">Sistemas Laser</button></li>
             </ul>

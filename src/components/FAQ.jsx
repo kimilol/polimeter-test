@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "A Polimeter é representante oficial de quais marcas no Brasil?",
-    answer: "Somos distribuidores autorizados de líderes globais em tecnologia de inspeção, como a Magnetic Analysis Corp (MAC), garantindo acesso a equipamentos de ponta, peças de reposição originais e suporte direto da fábrica."
+    answer: "Somos distribuidores autorizados de líderes globais em tecnologia de inspeção, como a Magnetic Analysis Corp (MAC), Rohmann, Scanmaster, Verimation e Xiris, garantindo acesso a equipamentos de ponta, peças de reposição originais e suporte direto da fábrica."
   }
 ];
 

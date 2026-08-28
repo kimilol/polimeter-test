@@ -8,7 +8,7 @@ const partners = [
     origin: 'Estados Unidos',
     founded: '1928',
     specialties: ['Correntes Parasitas', 'Ultrassom Phased Array', 'Campo Magnético (MFL)'],
-    desc: 'Líder global e pioneira em END industriais, com foco em automação siderúrgica de alta velocidade para controle de qualidade em tubos, barras, arames, tarugos e chapas.',
+    desc: 'Aparelhos e sistemas de ensaios por correntes parasitas, ultrassom e campo magnético de fuga. Empresa fundada em 1928 e líder em aplicações nas indústrias siderúrgicas (tubos, barras, arames, tarugos e chapas).',
     url: 'https://www.mac-ndt.com/'
   },
   {
@@ -16,7 +16,7 @@ const partners = [
     origin: 'Israel',
     founded: '1986',
     specialties: ['Ultrassom', 'Inspeção de Solda a Ponto', 'Sistemas Ferroviários'],
-    desc: 'Referência mundial em instrumentação e sistemas de ultrassom customizados, amplamente utilizados no setor automotivo e aeroespacial para mapeamento volumétrico de defeitos.',
+    desc: 'Aparelhos e sistemas de ensaios por ultrassom para soldas a ponto, indústrias ferroviária e siderúrgica.',
     url: 'https://www.scanmaster-irt.com/'
   },
   {
@@ -24,7 +24,7 @@ const partners = [
     origin: 'Alemanha',
     founded: '1977',
     specialties: ['Correntes Parasitas Portáteis', 'Inspeção Aeronáutica', 'Componentes Giratórios'],
-    desc: 'Especialista alemã no desenvolvimento de sondas especiais e aparelhos portáteis por Correntes Parasitas, fornecendo tecnologia de altíssima sensibilidade para aviação militar e comercial.',
+    desc: 'Aparelhos e sistemas de ensaios por correntes parasitas em auto-peças, aeronáutica e estruturas.',
     url: 'https://www.rohmann.de/'
   },
   {
@@ -32,7 +32,7 @@ const partners = [
     origin: 'Estados Unidos',
     founded: '1968',
     specialties: ['Correntes Parasitas', 'Controle Metalúrgico de Autopeças'],
-    desc: 'Especializada em sistemas rápidos de análise metalúrgica para triagem de dureza, tratamento térmico e verificação de ligas metálicas em autopeças de alto volume.',
+    desc: 'Aparelhos de ensaios por correntes parasitas em auto-peças.',
     url: 'https://www.verimation.com/'
   },
   {
@@ -40,7 +40,7 @@ const partners = [
     origin: 'Canadá',
     founded: '1989',
     specialties: ['Inspeção Geométrica a Laser', 'Câmeras de Monitoramento de Solda'],
-    desc: 'Pioneira em sistemas óticos de alta definição e perfilometria a laser para monitoramento de soldagem em formadoras de tubos com costura e braços robóticos industriais.',
+    desc: 'Aparelhos laser para controle de qualidade da solda em formadoras de tubos com costura.',
     url: 'https://www.xiris.com/'
   }
 ];

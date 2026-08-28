@@ -111,7 +111,7 @@ const Navbar = () => {
               <div className="nav-dropdown glass">
                 <button onClick={() => handleProductSelect('correntes-parasitas')}>Correntes Parasitas</button>
                 <button onClick={() => handleProductSelect('ultrassom')}>Ultrassom</button>
-                <button onClick={() => handleProductSelect('campo-magnetico')}>Campo Magnético (MFL)</button>
+                <button onClick={() => handleProductSelect('campo-magnetico')}>Campo Magnético</button>
                 <button onClick={() => handleProductSelect('particulas-magneticas')}>Partículas Magnéticas</button>
                 <button onClick={() => handleProductSelect('laser')}>Sistemas Laser</button>
               </div>
@@ -144,7 +144,7 @@ const Navbar = () => {
         <div className="mobile-section-title">Produtos</div>
         <button className="mobile-link submenu-item" onClick={() => handleProductSelect('correntes-parasitas')}>Correntes Parasitas</button>
         <button className="mobile-link submenu-item" onClick={() => handleProductSelect('ultrassom')}>Ultrassom</button>
-        <button className="mobile-link submenu-item" onClick={() => handleProductSelect('campo-magnetico')}>Campo Magnético (MFL)</button>
+        <button className="mobile-link submenu-item" onClick={() => handleProductSelect('campo-magnetico')}>Campo Magnético</button>
         <button className="mobile-link submenu-item" onClick={() => handleProductSelect('particulas-magneticas')}>Partículas Magnéticas</button>
         <button className="mobile-link submenu-item" onClick={() => handleProductSelect('laser')}>Sistemas Laser</button>
 

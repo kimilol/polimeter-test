@@ -20,7 +20,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="hero-subtitle">
-              Garanta a integridade estrutural da sua produção com tecnologias globais de Ultrassom Convencional e Phased Array, Correntes Parasitas (Eddy Current), Campo Magnético de Fuga (Magnetic Flux Leakage) e Partículas Magnéticas.
+              Garanta a integridade estrutural da sua produção com tecnologias globais de Correntes Parasitas (Eddy Current), Ultrassom Convencional e Phased Array, Campo Magnético de Fuga (Magnetic Flux Leakage) e Partículas Magnéticas.
             </p>
 
             <p className="hero-description">

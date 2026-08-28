@@ -31,10 +31,10 @@ const courses = [
   { code: 'CP-C-GER-1', name: 'Correntes Parasitas – Geral', level: 'Nível 1', role: 'Operador' },
   { code: 'CP-C-GER-2', name: 'Correntes Parasitas – Geral', level: 'Nível 2', role: 'Inspetor' },
   { code: 'CP-C-SOL-2', name: 'Correntes Parasitas – Soldas e Chapas', level: 'Nível 2', role: 'Inspetor' },
-  { code: 'CP-C-SEP', name: 'Separação de Materiais por Correntes Parasitas', level: 'Nível 2', role: 'Triagem' },
-  { code: 'CP-C-TUB', name: 'Defeitos em Tubos por Correntes Parasitas', level: 'Nível 2', role: 'Inspetor' },
-  { code: 'CP-C-BAR', name: 'Defeitos em Barras e Arames por Correntes Parasitas', level: 'Nível 2', role: 'Inspetor' },
-  { code: 'US-C-SAP', name: 'Ultrassom em Soldas a Ponto', level: 'Nível 2', role: 'Especialista' }
+  { code: 'CP-C-SEP', name: 'Separação de Materiais por Correntes Parasitas' },
+  { code: 'CP-C-TUB', name: 'Defeitos em Tubos por Correntes Parasitas' },
+  { code: 'CP-C-BAR', name: 'Defeitos em Barras e Arames por Correntes Parasitas' },
+  { code: 'US-C-SAP', name: 'Ultrassom em Soldas a Ponto' }
 ];
 
 const Servicos = () => {
@@ -84,7 +84,7 @@ const Servicos = () => {
             <GraduationCap size={36} className="cursos-header-icon" />
             <div>
               <h2>Treinamentos In-Company</h2>
-              <p>Qualificação de pessoal em END conduzida diretamente na sua empresa, conforme diretrizes <strong>SNT-TC 1A da ASNT</strong>.</p>
+              <p>Treinamentos para qualificação de pessoal em END conduzida diretamente na sua empresa, conforme diretrizes <strong>SNT-TC 1A da ASNT</strong>.</p>
             </div>
           </div>
 

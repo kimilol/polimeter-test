@@ -45,7 +45,7 @@ const Home = () => {
       <Diferenciais />
       
       <MidPageBanner 
-        title="A CONFIABILIDADE DO SEU PRODUTO FINAL COMEÇA NA PRECISÃO DA NOSSA INSPEÇÃO." 
+        title="A CONFIABILIDADE DO SEU PRODUTO FINAL COMEÇA NA PRECISÃO DO NOSSO SISTEMA DE INSPEÇÃO." 
         theme="default"
       />
       

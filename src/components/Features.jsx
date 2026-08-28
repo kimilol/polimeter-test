@@ -5,23 +5,23 @@ import './Features.css';
 const featuresData = [
   {
     icon: <Activity size={32} />,
-    title: "Ultrassom (UT)",
-    description: "Sistemas Convencionais e Phased Array (PA) para detecção de defeitos, controle do grau de nodularidade em fundidos, controle metalúrgico e inspeção de soldas.",
+    title: "Ultrassom",
+    description: "Sistemas Convencionais e Phased Array (PA) para detecção de defeitos, controle do grau de nodularidade em fundidos e controle metalúrgico.",
   },
   {
     icon: <Zap size={32} />,
-    title: "Correntes Parasitas",
-    description: "Sistemas Convencionais e Phased Array (PA) para detecção de defeitos, controle do grau de nodularidade em fundidos, controle metalúrgico e inspeção de soldas.",
+    title: "Correntes Parasitas (Eddy Current)",
+    description: "Detecção de defeitos, controlar e separar materiais ferrosos e não-ferrosos em termos de composição química (ligas), dureza, condição de tratamento térmico.",
   },
   {
     icon: <Magnet size={32} />,
     title: "Campo Magnético de Fuga",
-    description: "Máquinas e sistemas para detecção de defeitos superficiais e subsuperficiais com máxima precisão.",
+    description: "Máquinas e sistemas para detecção de defeitos superficiais e subsuperficiais em materias ferromagnéticos.",
   },
   {
     icon: <Target size={32} />,
     title: "Partículas Magnéticas",
-    description: "Máquinas e sistemas de partículas magnéticas.",
+    description: "Máquinas, sistema e acessórios de Partículas Magnéticas, para detecção de defeitos superficiais e subsuperficiais em materiais ferromagnéticos.",
   },
   {
     icon: <Settings size={32} />,
