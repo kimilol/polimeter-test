@@ -51,6 +51,8 @@ const Navbar = () => {
         </Link>
 
         <div className="desktop-menu">
+          <Link to="/" className="nav-link">Início</Link>
+
           {/* Dropdown: Institucional */}
           <div
             className="nav-dropdown-wrapper"
@@ -108,7 +110,7 @@ const Navbar = () => {
             {produtosOpen && (
               <div className="nav-dropdown glass">
                 <button onClick={() => handleProductSelect('correntes-parasitas')}>Correntes Parasitas</button>
-                <button onClick={() => handleProductSelect('ultrassom')}>Ultrassom Industrial</button>
+                <button onClick={() => handleProductSelect('ultrassom')}>Ultrassom</button>
                 <button onClick={() => handleProductSelect('campo-magnetico')}>Campo Magnético (MFL)</button>
                 <button onClick={() => handleProductSelect('particulas-magneticas')}>Partículas Magnéticas</button>
                 <button onClick={() => handleProductSelect('laser')}>Sistemas Laser</button>
@@ -130,6 +132,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div className={`mobile-menu glass ${mobileMenuOpen ? 'open' : ''}`}>
+        <Link to="/" className="mobile-link" onClick={closeMobile}>Início</Link>
+
         <div className="mobile-section-title">Institucional</div>
         <Link to="/#sobre" className="mobile-link submenu-item" onClick={closeMobile}>Sobre Nós</Link>
         <Link to="/#metodologia" className="mobile-link submenu-item" onClick={closeMobile}>Metodologia</Link>
@@ -139,7 +143,7 @@ const Navbar = () => {
 
         <div className="mobile-section-title">Produtos</div>
         <button className="mobile-link submenu-item" onClick={() => handleProductSelect('correntes-parasitas')}>Correntes Parasitas</button>
-        <button className="mobile-link submenu-item" onClick={() => handleProductSelect('ultrassom')}>Ultrassom Industrial</button>
+        <button className="mobile-link submenu-item" onClick={() => handleProductSelect('ultrassom')}>Ultrassom</button>
         <button className="mobile-link submenu-item" onClick={() => handleProductSelect('campo-magnetico')}>Campo Magnético (MFL)</button>
         <button className="mobile-link submenu-item" onClick={() => handleProductSelect('particulas-magneticas')}>Partículas Magnéticas</button>
         <button className="mobile-link submenu-item" onClick={() => handleProductSelect('laser')}>Sistemas Laser</button>

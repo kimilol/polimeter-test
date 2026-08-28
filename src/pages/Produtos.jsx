@@ -204,7 +204,7 @@ const techData = {
     ]
   },
   'ultrassom': {
-    title: 'Ultrassom Industrial (UT)',
+    title: 'Ultrassom (UT)',
     icon: <Activity size={32} />,
     description: 'Ensaios acústicos de alta frequência para caracterização interna de materiais, detecção de descontinuidades internas (porosidades, trincas, inclusões) e medição de espessura de alta precisão.',
     applications: [

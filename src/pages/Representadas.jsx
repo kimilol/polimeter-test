@@ -15,8 +15,8 @@ const partners = [
     name: 'ScanMaster Systems',
     origin: 'Israel',
     founded: '1986',
-    specialties: ['Ultrassom Industrial', 'Inspeção de Solda a Ponto', 'Sistemas Ferroviários'],
-    desc: 'Referência mundial em instrumentação e sistemas de ultrassom industrial customizados, amplamente utilizados no setor automotivo e aeroespacial para mapeamento volumétrico de defeitos.',
+    specialties: ['Ultrassom', 'Inspeção de Solda a Ponto', 'Sistemas Ferroviários'],
+    desc: 'Referência mundial em instrumentação e sistemas de ultrassom customizados, amplamente utilizados no setor automotivo e aeroespacial para mapeamento volumétrico de defeitos.',
     url: 'https://www.scanmaster-irt.com/'
   },
   {
@@ -44,6 +44,10 @@ const partners = [
     url: 'https://www.xiris.com/'
   }
 ];
+
+const sortedPartners = [...partners].sort((a, b) =>
+  a.name.localeCompare(b.name, 'pt-BR', { sensitivity: 'base' })
+);
 
 const Representadas = () => {
   useEffect(() => {
@@ -80,7 +84,7 @@ const Representadas = () => {
 
         {/* Partners List */}
         <div className="partners-list">
-          {partners.map((partner, idx) => (
+          {sortedPartners.map((partner, idx) => (
             <div className="partner-card" key={idx}>
               <div className="partner-card-left">
                 <div className="partner-meta">

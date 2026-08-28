@@ -12,14 +12,6 @@ const representatives = [
     email: 'francisco@mlrmaquinas.com.br'
   },
   {
-    region: 'Região Oeste Paulista (SP)',
-    company: 'Quatro Eixos Representações Comerciais LTDA.',
-    contact: 'Francisco Vendramini',
-    phones: ['(19) 3462-2389'],
-    mobile: '(19) 99768-0093',
-    email: 'quatroeixos@uol.com.br'
-  },
-  {
     region: 'Estados do Paraná e Santa Catarina (PR / SC)',
     company: 'RZG Representações LTDA.',
     contact: 'Ruy Zoschke',

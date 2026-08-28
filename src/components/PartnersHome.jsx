@@ -10,6 +10,10 @@ const partnersData = [
   { name: 'Xiris Automation Inc.', origin: 'Canadá' }
 ];
 
+const sortedPartnersData = [...partnersData].sort((a, b) =>
+  a.name.localeCompare(b.name, 'pt-BR', { sensitivity: 'base' })
+);
+
 const PartnersHome = () => {
   return (
     <section className="partners-home" id="parceiros">
@@ -22,7 +26,7 @@ const PartnersHome = () => {
         </p>
 
         <div className="partners-grid reveal" style={{ transitionDelay: '150ms' }}>
-          {partnersData.map((partner, idx) => (
+          {sortedPartnersData.map((partner, idx) => (
             <div className="partner-home-card glass-card" key={idx}>
               <div className="partner-home-meta">
                 <Globe size={16} className="partner-home-icon" />

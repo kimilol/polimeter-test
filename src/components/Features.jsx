@@ -5,7 +5,7 @@ import './Features.css';
 const featuresData = [
   {
     icon: <Activity size={32} />,
-    title: "Ultrassom Industrial (UT)",
+    title: "Ultrassom (UT)",
     description: "Sistemas Convencionais e Phased Array (PA) para detecção de defeitos, controle do grau de nodularidade em fundidos, controle metalúrgico e inspeção de soldas.",
   },
   {
