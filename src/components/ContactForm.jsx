@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Send, Phone, Mail, MapPin } from 'lucide-react';
+import { enviarContato } from '../services/contactService';
 import './ContactForm.css';
 
 const ContactForm = () => {
@@ -16,11 +17,25 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate form submission
-    alert('Solicitação enviada com sucesso! Entraremos em contato em breve.');
-    setFormData({ nome: '', email: '', telefone: '', empresa: '', segmento: '', mensagem: '' });
+
+    try {
+      await enviarContato(formData);
+
+      alert('Solicitação enviada com sucesso! Entraremos em contato em breve.');
+
+      setFormData({
+        nome: '',
+        email: '',
+        telefone: '',
+        empresa: '',
+        segmento: '',
+        mensagem: '',
+      });
+    } catch {
+      alert('Não foi possível enviar a solicitação. Tente novamente.');
+    }
   };
 
   return (
