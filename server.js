@@ -119,7 +119,7 @@ app.post('/api/contato', async (req, res) => {
 });
 
 // Lidar com rotas do React Router (SPA redirecionamento para o index.html)
-app.get('*', (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
