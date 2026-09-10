@@ -28,7 +28,12 @@ const HeroSection = () => {
             </p>
             
             <div className="hero-actions">
-              <a href="#contato" className="btn btn-primary btn-large">
+              <a 
+                href="https://wa.me/5511976393318?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20produtos%20da%20Polimeter" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-primary btn-large"
+              >
                 Falar com Consultor <ChevronRight size={20} />
               </a>
               <a href="#solucoes" className="btn btn-outline btn-large">

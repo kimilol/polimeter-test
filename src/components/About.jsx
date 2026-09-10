@@ -24,7 +24,14 @@ const About = () => {
               <li><CheckCircle2 size={20} className="check-icon" /> Representação exclusiva de tecnologias globais.</li>
             </ul>
 
-            <a href="#contato" className="btn btn-primary mt-4">Agendar Reunião de Diagnóstico</a>
+            <a 
+              href="https://wa.me/5511976393318?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20produtos%20da%20Polimeter" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-primary mt-4"
+            >
+              Agendar Reunião de Diagnóstico
+            </a>
           </div>
 
           <div className="about-image reveal" style={{ transitionDelay: '200ms' }}>

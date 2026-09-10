@@ -67,7 +67,7 @@ const Home = () => {
         title="O CUSTO DA NÃO-QUALIDADE SUPERA O INVESTIMENTO EM TECNOLOGIA."
         subtitle="Na indústria Aeroespacial, Automotiva, Ferroviário, Siderúrgica e de Óleo e Gás, a tolerância a falhas é zero. Equipamentos obsoletos ou sem calibração adequada expõem sua empresa a recalls, perda de contratos e riscos de segurança. A Polimeter oferece a segurança jurídica e técnica que sua operação exige."
         buttonText="Agendar Reunião de Diagnóstico"
-        buttonLink="#contato"
+        buttonLink="https://wa.me/5511976393318?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20produtos%20da%20Polimeter"
         theme="accent"
       />
       
