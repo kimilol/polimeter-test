@@ -1,9 +1,28 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Evita que arquivos estáticos inexistentes (como .pdf) sejam redirecionados para index.html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} \.(pdf|jpg|jpeg|png|gif|svg|ico|webp|css|js|woff|woff2|ttf)$ [NC]
+  RewriteRule ^ - [R=404,L]
+
+  # Redirecionamento SPA para rotas do React
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
   RewriteRule . /index.html [L]
 </IfModule>
+
+<IfModule mod_mime.c>
+  AddType application/pdf .pdf
+</IfModule>
+
+# Garante cabeçalhos corretos para download e visualização de PDF
+<FilesMatch "\.pdf$">
+  <IfModule mod_headers.c>
+    Header set Content-Type "application/pdf"
+    Header set X-Content-Type-Options "nosniff"
+  </IfModule>
+</FilesMatch>

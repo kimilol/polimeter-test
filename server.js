@@ -120,6 +120,10 @@ app.post('/api/contato', async (req, res) => {
 
 // Lidar com rotas do React Router (SPA redirecionamento para o index.html)
 app.use((req, res) => {
+  // Evita retornar index.html quando um arquivo estático (ex: PDF ou imagem) não existir
+  if (req.path.startsWith('/pdf/') || req.path.match(/\.(pdf|jpg|jpeg|png|svg|ico|webp|css|js|woff|woff2)$/i)) {
+    return res.status(404).send('Arquivo não encontrado.');
+  }
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
