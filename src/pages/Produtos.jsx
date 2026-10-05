@@ -676,6 +676,8 @@ const Produtos = () => {
                   <a 
                     href={activeSubcat.pdf} 
                     download 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-primary"
                     style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
                   >
@@ -708,6 +710,8 @@ const Produtos = () => {
                                 <a 
                                   href={sub.pdf} 
                                   download 
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                   className="btn btn-outline" 
                                   style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', height: 'auto' }}
                                 >
@@ -719,6 +723,8 @@ const Produtos = () => {
                                   key={pIdx}
                                   href={item.path} 
                                   download 
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                   className="btn btn-outline" 
                                   style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', height: 'auto' }}
                                 >
