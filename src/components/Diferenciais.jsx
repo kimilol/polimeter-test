@@ -10,7 +10,7 @@ const diferenciaisData = [
   {
     icon: <Globe size={32} />,
     title: "Representação de Tecnologias Globais",
-    description: "Representante e Distribuidor autorizado dos maiores fabricantes mundiais de tecnologia de inspeção. Trazemos para o Brasil o estado da arte em Ultrassom Convencional e Phased Array, Correntes Parasitas, Campo Magnético de Fuga e Partículas Magnéticas."
+    description: "Representante e Distribuidor autorizado dos maiores fabricantes mundiais de tecnologia de inspeção. Trazemos para o Brasil o estado da arte em Correntes Parasitas (Eddy Current), Ultrassom Convencional e Phased Array, Campo Magnético de Fuga (Magnetic Flux Leakage) e Partículas Magnéticas."
   },
   {
     icon: <Play size={32} />,

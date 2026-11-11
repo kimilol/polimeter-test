@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import BannerSlider from '../components/BannerSlider';
 import HeroSection from '../components/HeroSection';
 import Diferenciais from '../components/Diferenciais';
 import MidPageBanner from '../components/MidPageBanner';
@@ -40,6 +41,8 @@ const Home = () => {
 
   return (
     <>
+      <BannerSlider />
+
       <HeroSection />
       
       <Diferenciais />

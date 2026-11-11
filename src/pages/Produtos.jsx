@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useParams, useNavigate, Link } from 'react-router-dom';
-import { Activity, Zap, Magnet, Target, Cpu, ShieldAlert, FileText, Download, ChevronDown, ChevronRight } from 'lucide-react';
+import { Activity, Zap, Magnet, Target, Cpu, ShieldAlert, FileText, Download, ExternalLink, ChevronDown, ChevronRight } from 'lucide-react';
 import './Produtos.css';
 
 import elotestM2V3Img from '../assets/produtos/elotest-m2v3.jpg';
@@ -31,7 +31,7 @@ import utxSpotweldImg from '../assets/produtos/utx-spotweld.png';
 import utmateImg from '../assets/produtos/utmate.jpg';
 import utproImg from '../assets/produtos/utpro.jpg';
 
-import echomacFd4eImg from '../assets/produtos/echomac-fd4e.jpg';
+import echomac2Img from '../assets/produtos/echomac-2.png';
 import echomacPaImg from '../assets/produtos/echomac-pa.jpg';
 import echomacFd6Img from '../assets/produtos/echomac-fd6.jpg';
 import fanucTubosImg from '../assets/produtos/fanuc-tubos.jpg';
@@ -48,6 +48,9 @@ import sfb50Img from '../assets/produtos/sfb50.jpg';
 import sfb100Img from '../assets/produtos/sfb100.jpg';
 import as220wImg from '../assets/produtos/as220w.jpg';
 import as220aImg from '../assets/produtos/as220a.jpg';
+import hrUtOemImg from '../assets/produtos/hr-ut-oem.png';
+import urUtImg from '../assets/produtos/ur-ut.jpg';
+import hrxUtImg from '../assets/produtos/hrx-ut.jpg';
 
 import tarugosRedondosImg from '../assets/produtos/tarugos-redondos.jpg';
 import chapasTirasAs200pImg from '../assets/produtos/chapas-tiras-as200p.jpg';
@@ -55,7 +58,7 @@ import chapasTirasAs200pImg from '../assets/produtos/chapas-tiras-as200p.jpg';
 import transdutoresImg from '../assets/produtos/transdutores.jpg';
 import blocosPadroesImg from '../assets/produtos/blocos-padroes.jpg';
 
-import rotofluxDcImg from '../assets/produtos/rotoflux-dc.jpg';
+import macfluxDcImg from '../assets/produtos/macflux-dc.png';
 import rotofluxAcImg from '../assets/produtos/rotoflux-ac.jpg';
 
 import bancadaMpiImg from '../assets/produtos/bancada-mpi.png';
@@ -150,7 +153,7 @@ const techData = {
       },
       {
         id: 'deteccao-pecas',
-        name: 'Detecção de Defeitos em Peças Seriadas',
+        name: 'Detecção de Defeitos em Peças Metálicas Seriadas',
         desc: 'Inspeção de alta cadência e precisão em componentes automotivos e aeroespaciais de segurança crítica, detectando trincas e porosidades instantaneamente.',
         subcategories: [
           {
@@ -176,27 +179,27 @@ const techData = {
             name: 'Minimac® II',
             desc: 'Aparelho digital, compacto e econômico que pode operar com 1 ou 2 canais de teste individualmente configurados. Para inspecionar material contínuo ou cortado, em sistemas na linha ou fora da linha. Fornecido com software e manual de instruções de operação em português. Monitor externo fornecido pelo cliente.',
             pdfs: [
-              { name: 'Especificações Minimac 55', path: '/pdf/minimac-55-specification-port-2015.pdf' },
-              { name: 'Manual de Instrumento', path: '/pdf/minimac-ii-instrument-2023-portuguese.pdf' }
+              { name: 'Especificações Minimac® II', path: '/pdf/minimac-ii-specification-portuguese-2024.pdf' },
+              { name: 'Manual de Instrumento', path: '/pdf/minimac-ii-instrument-portuguese-2024.pdf' }
             ],
             image: minimacIiImg
           },
           {
-            name: 'MultiMac® SM',
+            name: 'MultiMac® II SM',
             desc: 'Pode operar com até dois canais de teste individualmente configurados. Para inspecionar material contínuo ou cortado, em sistemas na linha ou fora da linha. Computador industrial com software em ambiente Windows. Fornecido com software e manual de instruções de operação em português.',
-            pdf: '/pdf/multimac_sm_portugues-2015-lr.pdf',
+            pdf: '/pdf/multimac-ii-sm.pdf',
             image: multimacSmImg
           },
           {
-            name: 'MultiMac®',
+            name: 'MultiMac® II',
             desc: 'É o aparelho top de linha para esta aplicação. Pode operar com até oito canais de teste individualmente configurados. Para inspecionar material contínuo ou cortado, em sistemas na linha ou fora da linha. Computador industrial com software em ambiente Windows. Fornecido com software e manual de instruções de operação em português.',
-            pdf: '/pdf/multimac-002-port-may09.pdf',
+            pdf: '/pdf/multimac-ii.pdf',
             image: multimacImg
           },
           {
             name: 'Cabeçotes com sondas rotativas Rotomac®',
             desc: 'Vários modelos de cabeçotes rotativos com duas, quatro ou seis sondas, com eletrônica de teste MultiMac para inspecionar material redondo, com diâmetros externos de 3 a 180 mm. Ideal para detectar defeitos superficiais longitudinais longos.',
-            pdf: '/pdf/rotomac-rotary-2015-port.pdf',
+            pdf: '/pdf/rotomac-rotaries-2026.pdf',
             image: rotomacImg
           }
         ]
@@ -271,10 +274,10 @@ const techData = {
         desc: 'Sistemas industriais integrados e turnkey para inspeção automática volumétrica em alta velocidade na indústria siderúrgica.',
         subcategories: [
           {
-            name: 'Echomac FD-4E',
-            desc: 'Eletrônica multi-canais para detecção de defeitos e medição de espessuras (em linha ou fora). Até 32 canais independentes por chassi, curvas DAC de 16 pontos e software Echohunter Windows. Utilizado em sistemas de imersão, jatos de água ou cabeçotes rotativos. Software e manual em português.',
-            pdf: '/pdf/echomac-fd4e.pdf',
-            image: echomacFd4eImg
+            name: 'Echomac II',
+            desc: 'Instrumento ultrassônico para detecção de defeitos, medição de espessura e controle dimensional em tubos e barras. Inclui até 16 canais de teste independentes em um único computador, curvas DAC de 15 segmentos, 4 gates independentes por canal e operação em modo Pulso-Eco ou Transmissão Direta. Utilizado em sistemas rotativos, de imersão ou jatos de água, atendendo às normas API e ASTM.',
+            pdf: '/pdf/echomac-2.pdf',
+            image: echomac2Img
           },
           {
             name: 'Echomac FD-6 / 6A',
@@ -298,7 +301,8 @@ const techData = {
             name: 'Monitor de remoção do cordão interno de tubos com costura',
             desc: 'Detecta instantaneamente a não remoção do cordão interno de solda na formadora. A eletrônica Echomac mapeia o perfil do cordão e aciona um alarme acústico ou para a formadora na ocorrência do defeito.',
             pdf: '/pdf/monitor-cordao.pdf',
-            image: monitorCordaoImg
+            image: monitorCordaoImg,
+            disabled: true
           },
           {
             name: 'Sistemas phased array para formadoras de tubos com costura',
@@ -359,40 +363,66 @@ const techData = {
         desc: 'Sistemas de ultrassom automáticos e manuais para detecção de trincas internas em trilhos e rodas de trens.',
         subcategories: [
           {
+            name: 'Sistema de Inspeção Ultrassônica Ferroviária de Alta Velocidade (HR-UT OEM)',
+            desc: 'O HR-UT OEM é um sistema de inspeção ferroviária ultrassônica integrado ao veículo, projetado para instalação em veículos ferroviários de diagnóstico e manutenção. Projetado como uma solução OEM, ele se adapta às interfaces mecânicas, elétricas e de controle do veículo host, ao mesmo tempo em que fornece detecção confiável de falhas ferroviárias de alta velocidade.',
+            pdf: 'https://scanmaster-irt.com/products/railways/high-speed-rail/',
+            pdfLabel: 'Detalhes',
+            image: hrUtOemImg
+          },
+          {
+            name: 'Sistema de Teste Ultrassônico Ferroviário Urbano (UR-UT)',
+            desc: 'O UR-UT é um sistema de teste ferroviário ultrassônico projetado para infraestrutura de bondes, metrôs e ferrovias urbanas. O sistema opera em um carrinho elétrico autopropelido e suporta inspeção ultrassônica com medição opcional da geometria da via para manutenção ferroviária urbana e monitoramento de condições.',
+            pdf: 'https://scanmaster-irt.com/products/railways/urban-rail-testing/',
+            pdfLabel: 'Detalhes',
+            image: urUtImg
+          },
+          {
+            name: 'Sistema de Teste Ultrassônico Ferroviário de Alta Velocidade (HRX-UT)',
+            desc: 'O HRX-UT é um sistema compacto de teste ferroviário ultrassônico projetado para integração em veículos de manutenção road–rail (Hi-Rail). Projetado como uma solução OEM, ele se adapta às interfaces mecânicas, elétricas e operacionais do veículo anfitrião, ao mesmo tempo em que fornece detecção confiável de defeitos ferroviários durante atividades de manutenção e inspeção de rotina.',
+            pdf: 'https://scanmaster-irt.com/products/railways/high-rail-ultrasonic-testing/',
+            pdfLabel: 'Detalhes',
+            image: hrxUtImg
+          },
+          {
             name: 'Modelo SFB-50',
             desc: 'Para trilhos ferroviários, projetado para instalação em carros de manutenção, permitindo inspeções a velocidades de até 30 Km/h com registro total de resultados.',
             pdf: '/pdf/sfb50.pdf',
-            image: sfb50Img
+            image: sfb50Img,
+            disabled: true
           },
           {
             name: 'Modelo SFB-100',
             desc: 'Para trilhos ferroviários, totalmente automático, com 1 a 24 canais de teste, permitindo inspeções a velocidades de até 90 Km/h com registro total de resultados.',
             pdf: '/pdf/sfb100.pdf',
-            image: sfb100Img
+            image: sfb100Img,
+            disabled: true
           },
           {
             name: 'Modelo AS-220w',
             desc: 'Sistema dedicado de ultrassom para inspeção de rodas ferroviárias.',
-            image: as220wImg
+            image: as220wImg,
+            disabled: true
           },
           {
             name: 'Modelo AS-220a',
             desc: 'Sistema dedicado de ultrassom para inspeção de eixos ferroviários.',
             pdf: '/pdf/as220a.pdf',
-            image: as220aImg
+            image: as220aImg,
+            disabled: true
           }
         ]
       },
       {
         id: 'tarugos-chapas',
-        name: 'Sistemas para Tarugos, Chapas e Tiras',
+        name: 'Sistemas para Chapas e Tiras',
         desc: 'Soluções robustas de portal ou pórticos com múltiplos canais de ultrassom para controle de sanidade volumétrica.',
         subcategories: [
           {
             name: 'Sistema para tarugos redondos',
             desc: 'Sistema especial combinado para detectar defeitos superficiais, sub-superficiais e internos em tarugos redondos. Consiste de um cabeçote rotativo de ensaios por correntes parasitas para detectar defeitos superficiais e um cabeçote rotativo de ultrassom para detectar defeitos sub-superficiais e internos.',
             pdf: '/pdf/tarugos-redondos.pdf',
-            image: tarugosRedondosImg
+            image: tarugosRedondosImg,
+            disabled: true
           },
           {
             name: 'Sistema para chapas e tiras metálicas, Modelo AS-200 P',
@@ -436,10 +466,14 @@ const techData = {
         desc: 'Equipamentos industriais robustos que magnetizam o material e analisam o fluxo de fuga para determinar com exatidão a profundidade e o tamanho de defeitos internos e externos.',
         subcategories: [
           {
-            name: 'Rotoflux DC',
-            desc: 'Sistema Rotoflux DC para detecção de defeitos longitudinais e transversais, nos diâmetros externo e interno e em todo o corpo de tubos de materiais ferromagnéticos de grandes diâmetros e espessuras de parede.\n\nExcelente sensibilidade, possibilitando a detecção de defeitos com profundidades a partir de 5% da espessura da parede tanto no diâmetro externo como no diâmetro interno, dependendo do material e suas condições superficiais.\n\nDiferenciação de defeitos detectados nos diâmetros externo e interno. Três sistemas disponíveis para tubos com diâmetros externos de 30 a 500 mm. Eletrônica de teste com base num computador industrial com software em ambiente Windows.\n\nFornecido com software e manual de instruções de operação em português.',
-            pdf: '/pdf/rotoflux-dc.pdf',
-            image: rotofluxDcImg
+            name: 'MACflux DC',
+            desc: 'A Magnetic Analysis Corp.® (MAC), líder global em testes não destrutivos (NDT) desde 1928, tem o orgulho de anunciar uma parceria com a PITCO LLC, de propriedade da Artic Testing and Inspection. Sob este acordo, a MAC oferece o MacFlux DC Series, um sistema de teste MFL premium desenvolvido pela PITCO LLC.\n\nProjetado para produtores de tubos OCTG\n\nA série MacFlux DC foi projetada especificamente para linhas de produção de alto volume, 24 horas por dia, 7 dias por semana, comuns em usinas de tubos de aço, com poderosos recursos de inspeção adaptados para produtos tubulares da Oil Country (OCTG). Essas unidades EMI de quatro funções oferecem precisão de detecção, velocidade de produção e confiabilidade incomparáveis — tudo o que os fabricantes precisam para atender a rigorosos padrões de qualidade e manter as operações funcionando sem problemas.\n\nBenefícios dos sistemas MFL Premium:\n• Mais capaz de localizar perturbações de fluxo\n• Melhor capacidade de avaliar perturbações de fluxo\n• Melhor capacidade de relatar perturbações de fluxo\n• Maior resolução e maior precisão\n• Aumento da produção, pois a segunda junta pode entrar no sistema de inspeção antes que a primeira saia do sistema.',
+            pdf: 'https://www.mac-ndt.com/pages/macflux-dc-series',
+            pdfLabel: 'Detalhes',
+            pdfs: [
+              { name: 'Download PDF', path: '/pdf/mac-octgcomplete-2025.pdf' }
+            ],
+            image: macfluxDcImg
           }
         ]
       },
@@ -690,7 +724,9 @@ const Produtos = () => {
                 <div className="subcategories-section" style={{ marginTop: '2rem' }}>
                   <h3 className="section-subtitle">Modelos Disponíveis</h3>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                    {activeSubcat.subcategories.map((sub, idx) => (
+                    {activeSubcat.subcategories
+                      .filter((sub) => !sub.disabled)
+                      .map((sub, idx) => (
                       <div key={idx} className="sub-model-detail-card glass" style={{ display: 'flex', gap: '1.5rem', padding: '1.5rem', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.05)', background: 'rgba(10, 25, 47, 0.3)', flexWrap: 'wrap', alignItems: 'flex-start' }}>
                         <div className="product-card-image-wrapper">
                           {sub.image ? (
@@ -709,13 +745,13 @@ const Produtos = () => {
                               {sub.pdf && (
                                 <a 
                                   href={sub.pdf} 
-                                  download 
+                                  {...(!sub.pdf.startsWith('http') ? { download: true } : {})}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="btn btn-outline" 
                                   style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', height: 'auto' }}
                                 >
-                                  <Download size={14} /> Download PDF
+                                  {sub.pdf.startsWith('http') ? <ExternalLink size={14} /> : <Download size={14} />} {sub.pdfLabel || 'Download PDF'}
                                 </a>
                               )}
                               {sub.pdfs && sub.pdfs.map((item, pIdx) => (

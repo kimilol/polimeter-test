@@ -1,0 +1,386 @@
+.banner-slider-section {
+  padding: 84px 0 0 0;
+  margin: 0;
+  width: 100%;
+  background-color: var(--bg-primary);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.14);
+}
+
+.banner-slider {
+  position: relative;
+  width: 100%;
+  height: clamp(440px, 36.5vw, 600px);
+  overflow: hidden;
+  background-color: #020f1e;
+  outline: none;
+}
+
+.banner-slides-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.75s ease;
+  z-index: 1;
+}
+
+.banner-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.banner-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  transform: scale(1.03);
+  transition: transform 6.5s ease-out;
+  user-select: none;
+  pointer-events: none;
+}
+
+.banner-slide.active .banner-bg-image {
+  transform: scale(1);
+}
+
+/* Dark navy gradient preserving high text contrast while revealing equipment on the right */
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 15, 30, 0.96) 0%,
+      rgba(2, 15, 30, 0.9) 34%,
+      rgba(2, 15, 30, 0.58) 56%,
+      rgba(2, 15, 30, 0.18) 82%,
+      rgba(2, 15, 30, 0.08) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(2, 15, 30, 0.35) 0%,
+      transparent 22%,
+      transparent 78%,
+      rgba(2, 15, 30, 0.65) 100%
+    );
+  pointer-events: none;
+}
+
+/* Subtle diagonal industrial light accents inspired by corporate NDT visuals */
+.banner-tech-accents {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(122deg, rgba(14, 165, 233, 0.12) 0%, transparent 18%),
+    linear-gradient(122deg, transparent 88%, rgba(56, 189, 248, 0.1) 100%);
+  pointer-events: none;
+}
+
+.banner-content-wrapper {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.banner-content-container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 4.25rem;
+}
+
+.banner-text-block {
+  max-width: 590px;
+  transform: translateY(14px);
+  opacity: 0;
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.12s, opacity 0.65s ease 0.12s;
+}
+
+.banner-slide.active .banner-text-block {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.banner-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 3.2vw, 3rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+}
+
+.banner-title-accent {
+  color: var(--brand-light-blue);
+  background: linear-gradient(90deg, #38bdf8 0%, #67e8f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.banner-pulse-divider {
+  display: flex;
+  align-items: center;
+  width: clamp(160px, 24vw, 250px);
+  margin-bottom: 1rem;
+  color: var(--brand-light-blue);
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.65));
+}
+
+.banner-pulse-divider svg {
+  width: 100%;
+  height: 18px;
+  display: block;
+}
+
+.banner-description {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1.55;
+  color: #e2e8f0;
+  max-width: 500px;
+  margin-bottom: 1.75rem;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55);
+}
+
+.banner-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1.85rem;
+  border-radius: 9999px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(2, 15, 30, 0.55);
+  border: 1.5px solid var(--brand-light-blue);
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.28), inset 0 0 12px rgba(56, 189, 248, 0.12);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: all var(--transition-normal);
+}
+
+.banner-cta-icon {
+  color: var(--brand-light-blue);
+  transition: transform var(--transition-normal), color var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.banner-cta:hover,
+.banner-cta:focus-visible {
+  background: linear-gradient(135deg, var(--brand-light-blue), var(--brand-blue));
+  color: #020f1e;
+  border-color: transparent;
+  box-shadow: 0 0 28px rgba(56, 189, 248, 0.5);
+  transform: translateY(-2px);
+}
+
+.banner-cta:hover .banner-cta-icon,
+.banner-cta:focus-visible .banner-cta-icon {
+  color: #020f1e;
+  transform: translateX(4px);
+}
+
+/* Side navigation arrows */
+.banner-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 15, 30, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #e6f1ff;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all var(--transition-fast);
+}
+
+.banner-nav-arrow:hover,
+.banner-nav-arrow:focus-visible {
+  background: rgba(14, 165, 233, 0.28);
+  border-color: var(--brand-light-blue);
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+}
+
+.banner-nav-prev {
+  left: 1.25rem;
+}
+
+.banner-nav-next {
+  right: 1.25rem;
+}
+
+/* Bottom indicators */
+.banner-indicators {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(2, 15, 30, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.banner-indicator {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 9999px;
+  background: rgba(230, 241, 255, 0.35);
+  cursor: pointer;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.banner-indicator:hover {
+  background: rgba(56, 189, 248, 0.75);
+}
+
+.banner-indicator.active {
+  width: 30px;
+  background: var(--brand-light-blue);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.7);
+}
+
+/* Tablet responsiveness */
+@media (max-width: 1024px) {
+  .banner-slider {
+    height: 440px;
+  }
+
+  .banner-content-container {
+    padding: 0 4rem;
+  }
+
+  .banner-text-block {
+    max-width: 480px;
+  }
+
+  .banner-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(2, 15, 30, 0.96) 0%,
+      rgba(2, 15, 30, 0.88) 45%,
+      rgba(2, 15, 30, 0.45) 78%,
+      rgba(2, 15, 30, 0.25) 100%
+    );
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 680px) {
+  .banner-slider-section {
+    padding-top: 76px;
+  }
+
+  .banner-slider {
+    height: 450px;
+  }
+
+  .banner-bg-image {
+    object-position: 75% center;
+  }
+
+  .banner-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(2, 15, 30, 0.5) 0%,
+      rgba(2, 15, 30, 0.78) 42%,
+      rgba(2, 15, 30, 0.96) 78%,
+      #020f1e 100%
+    );
+  }
+
+  .banner-content-wrapper {
+    align-items: flex-end;
+    padding-bottom: 3.75rem;
+  }
+
+  .banner-content-container {
+    padding: 0 1.25rem;
+  }
+
+  .banner-text-block {
+    max-width: 100%;
+  }
+
+  .banner-title {
+    font-size: 1.65rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .banner-pulse-divider {
+    width: 150px;
+    margin-bottom: 0.75rem;
+  }
+
+  .banner-description {
+    font-size: 0.92rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .banner-cta {
+    padding: 0.65rem 1.4rem;
+    font-size: 0.88rem;
+  }
+
+  .banner-nav-arrow {
+    top: 26%;
+    width: 36px;
+    height: 36px;
+  }
+
+  .banner-nav-prev {
+    left: 0.65rem;
+  }
+
+  .banner-nav-next {
+    right: 0.65rem;
+  }
+
+  .banner-indicators {
+    bottom: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner-slide,
+  .banner-text-block,
+  .banner-bg-image {
+    transition: none;
+    transform: none;
+  }
+}

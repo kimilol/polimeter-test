@@ -20,7 +20,7 @@ const About = () => {
 
             <ul className="about-list">
               <li><CheckCircle2 size={20} className="check-icon" /> Fornecedor homologado em grandes indústrias.</li>
-              <li><CheckCircle2 size={20} className="check-icon" /> Corpo técnico com certificação Nível 3 (ABENDI/ASNT).</li>
+              <li><CheckCircle2 size={20} className="check-icon" /> Corpo técnico com certificação Nível 2 e 3 ASNT.</li>
               <li><CheckCircle2 size={20} className="check-icon" /> Representação exclusiva de tecnologias globais.</li>
             </ul>
 
